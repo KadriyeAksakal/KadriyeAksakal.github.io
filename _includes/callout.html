@@ -23,11 +23,11 @@
 <p>Apache Spark ilk olarak 2009 yılında UC Berkeley tarafından geliştirilmiştir. Daha sonra 2010 da açık kaynak kodlu bir Apache projesi haline gelmiştir. Açık kaynaklı bir dağıtık hesalama sistemidir. Scala dili ile yazılmıştır. Hızlı ve in-memory çalışır.</p>
 <br>
 <h4>Desteklediği diller;</h4>
-  <li style="margin-left:40px;">Scala</li>
-  <li style="margin-left:40px;">Java</li>
-  <li style="margin-left:40px;">Python</li>
-  <li style="margin-left:40px;">Clojure</li>
-  <li style="margin-left:40px;">R</li>
+  <li>Scala</li>
+  <li>Java</li>
+  <li>Python</li>
+  <li>Clojure</li>
+  <li>R</li>
 
 <h3>Apache Spark Mimarisi</h3>
 <img class="apache-img"  src="img/mimari.jpg"/>
@@ -41,12 +41,12 @@
 <h4>4.RDD(Resilient Distributed Datasets)</h4>
 	<p>RDD hesaplamaları yeniden düzenlemeye ve veri işlemeyi optimize etmeye yardımcı olur.RDD aynı zamanda hata toleransı da sağlar.
       Çünkü RDD kendi nasıl yeniden oluşturacağını ve verileri nasıl yeniden işleyeceğini bilir.RDD iki tip operasyon destekler.</p>
-		<li style="margin-left:60px;">a.Transformasyon:
+		<li>a.Transformasyon:
 		<p>Yeni bir RDD oluşturur ve tek bir değer dönmez oluşturduğu yeni RDD yi döner.Transformasyon metotları herhangi bir aksiyon methodu çağrılmadığı sürece bir işlem yapmaz sadece bir
 			  RDD alır ve geriye yeni bir RDD döndürür.En çok kullanılan fonksiyonları map,filter,flatMap,groupByKey,reduceByKey,aggregateByKey,pipe ve coalesce.
 		</p>
 		</li>	  
-		<li style="margin-left:60px;">b.Aksiyon:
+		<li>b.Aksiyon:
 		<p>İşlemleri değerlendirip geriye yeni bir değer döner.RDD objesinin üstünde bir aksiyon fonksiyonu çağrıldığında tüm veri işleme sorguları çalıştırılır ve geriye bir 
               sonuç değeri döndürür.En çok kullanılan fonksiyonları reduce,collect,count,first,take,countByKey ve foreach.    
 		</p>
@@ -58,12 +58,12 @@
 <h4>1.Spark Core:</h4>
 <p>Hafıza yönetimi işlerin dağıtılması, hata kurtarma, saklama ve dosya sistemlerine erişim gibi temel bileşenleri içerir.Resilient Distributed DataSets(RDDs,Hata Durumunda yeniden oluşturulabilen
 	  (Resilient) dağıtık veri kümeleri) Spark hesaplamalarında kullanılan,hesaplama düümlerine dağıtılmış en temel bileşenidir.RDD'lerin oluşturulması ve yönetilmesi için gerekli API'yi sağlar.
-	<p style="margin-left:40px;"> =>RDD(Resilient Distributed Dataset): RDD'ler oluşturulduktan sonra durumu güncellenemeyen(immutable) dağıtık nesneler koleksiyonudur.</p>
-	<p style="margin-left:60px;">-Paralel işletilirler</p>
-	<p style="margin-left:60px;">	-Resilient:Eğer veri kaybolursa yeniden yarat</p>
-	<p style="margin-left:60px;">    -Distributed:Dağıtık</p>
-	<p style="margin-left:60px;">	-Dataset:Veri manuel yaratabileceği gibi otomatik olarak da yaratılabilir.</p>
-	<p style="margin-left:60px;">	-RDD'ler read-only ve immutable'dır.Yani işleyebilirsin ama değiştiremezsin, okuyabilirsin ama yazamazsın.</p>
+	<p> =>RDD(Resilient Distributed Dataset): RDD'ler oluşturulduktan sonra durumu güncellenemeyen(immutable) dağıtık nesneler koleksiyonudur.</p>
+	<p>-Paralel işletilirler</p>
+	<p>	-Resilient:Eğer veri kaybolursa yeniden yarat</p>
+	<p>    -Distributed:Dağıtık</p>
+	<p>	-Dataset:Veri manuel yaratabileceği gibi otomatik olarak da yaratılabilir.</p>
+	<p>	-RDD'ler read-only ve immutable'dır.Yani işleyebilirsin ama değiştiremezsin, okuyabilirsin ama yazamazsın.</p>
 </p>		
 
 <h4>2.Spark SQL:</h4>
@@ -83,8 +83,6 @@
 <h4>5.GraphX:</h4>
 <p>RDD'lerin yönlü graphlara dönüştürülüp(directed direct) paralel olarak işlenmesini sağlayan bileşendir. Graph'ı oluşturan her noktaya (Vertex) ve ara bağlantılara(edge) farklı özellikler
  tanımlamak,böylece sosyal paylaşım sistemlerin de sıklıkla kullanılan arkadaş networkü gibi bir yapıyı,paralel graph algoritmaları ile yönetmek mümkündür.Bazı problemlerin çözümü için çok daha hızlı çalışırlar ve kolay anlaşılırlar.</p>
-<img class="apache-img"  src="img/ag.jpg"/>
-<img class="apache-img" src="img/ag1.png"/>
 <br><br>
 
 
