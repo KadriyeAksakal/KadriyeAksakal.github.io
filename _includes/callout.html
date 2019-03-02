@@ -22,12 +22,6 @@
 <h3>Peki nedir bu Apache Spark?</h3>
 <p>Apache Spark ilk olarak 2009 yılında UC Berkeley tarafından geliştirilmiştir. Daha sonra 2010 da açık kaynak kodlu bir Apache projesi haline gelmiştir. Açık kaynaklı bir dağıtık hesalama sistemidir. Scala dili ile yazılmıştır. Hızlı ve in-memory çalışır.</p>
 <br>
-<h4>Desteklediği diller;</h4>
-  <li>Scala</li>
-  <li>Java</li>
-  <li>Python</li>
-  <li>Clojure</li>
-  <li>R</li>
 
 <h3>Apache Spark Mimarisi</h3>
 <img class="apache-img"  src="img/mimari.jpg"/>
@@ -43,7 +37,7 @@
       Çünkü RDD kendi nasıl yeniden oluşturacağını ve verileri nasıl yeniden işleyeceğini bilir.RDD iki tip operasyon destekler.</p>
 		<li>a.Transformasyon:
 		<p>Yeni bir RDD oluşturur ve tek bir değer dönmez oluşturduğu yeni RDD yi döner.Transformasyon metotları herhangi bir aksiyon methodu çağrılmadığı sürece bir işlem yapmaz sadece bir
-			  RDD alır ve geriye yeni bir RDD döndürür.En çok kullanılan fonksiyonları map,filter,flatMap,groupByKey,reduceByKey,aggregateByKey,pipe ve coalesce.
+	           RDD alır ve geriye yeni bir RDD döndürür.En çok kullanılan fonksiyonları map,filter,flatMap,groupByKey,reduceByKey,aggregateByKey,pipe ve coalesce.
 		</p>
 		</li>	  
 		<li>b.Aksiyon:
@@ -60,10 +54,10 @@
 	  (Resilient) dağıtık veri kümeleri) Spark hesaplamalarında kullanılan,hesaplama düümlerine dağıtılmış en temel bileşenidir.RDD'lerin oluşturulması ve yönetilmesi için gerekli API'yi sağlar.
 	<p> =>RDD(Resilient Distributed Dataset): RDD'ler oluşturulduktan sonra durumu güncellenemeyen(immutable) dağıtık nesneler koleksiyonudur.</p>
 	<p>-Paralel işletilirler</p>
-	<p>	-Resilient:Eğer veri kaybolursa yeniden yarat</p>
-	<p>    -Distributed:Dağıtık</p>
-	<p>	-Dataset:Veri manuel yaratabileceği gibi otomatik olarak da yaratılabilir.</p>
-	<p>	-RDD'ler read-only ve immutable'dır.Yani işleyebilirsin ama değiştiremezsin, okuyabilirsin ama yazamazsın.</p>
+	<p>-Resilient:Eğer veri kaybolursa yeniden yarat</p>
+	<p>-Distributed:Dağıtık</p>
+	<p>-Dataset:Veri manuel yaratabileceği gibi otomatik olarak da yaratılabilir.</p>
+	<p>-RDD'ler read-only ve immutable'dır.Yani işleyebilirsin ama değiştiremezsin, okuyabilirsin ama yazamazsın.</p>
 </p>		
 
 <h4>2.Spark SQL:</h4>
@@ -84,7 +78,13 @@
 <p>RDD'lerin yönlü graphlara dönüştürülüp(directed direct) paralel olarak işlenmesini sağlayan bileşendir. Graph'ı oluşturan her noktaya (Vertex) ve ara bağlantılara(edge) farklı özellikler
  tanımlamak,böylece sosyal paylaşım sistemlerin de sıklıkla kullanılan arkadaş networkü gibi bir yapıyı,paralel graph algoritmaları ile yönetmek mümkündür.Bazı problemlerin çözümü için çok daha hızlı çalışırlar ve kolay anlaşılırlar.</p>
 <br><br>
-
+	
+<h3>Desteklediği diller;</h3>
+  <li>Scala</li>
+  <li>Java</li>
+  <li>Python</li>
+  <li>Clojure</li>
+  <li>R</li>
 
 	</div>
     </div>
