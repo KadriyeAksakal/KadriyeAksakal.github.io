@@ -1,5 +1,90 @@
-<aside class="callout">
-  <div class="text-vertical-center">
-    <h1>Vertically Centered Text</h1>
-  </div>
+<aside class="callout" id="Apache">
+  <div class="apache">
+  <h1>Apache Spark Nedir?</h1>
+  <br><br>
+	 <p>Öncelikle Apache Nedir? Bu sorunun yanıtına bakalım. Apache: Açık kaynak kodlu bir web sunucusu programıdır.Peki bu web sunucuları ne iş yapar? Web sunucuları internet tarayıcılarıyla bağlanan kullanıcıların isteklerine cevap verir.</p>
+    <p>Apache birçok işletim sistamiyle çalışabilir örneğin; Unix, GNU, Linux, Microsoft Windows, Novell Natware vb. işletim sistemleriyle çalışır. Apache'nin kendi bünyesi altında bir çok da ürünü vardır bunlar; 
+     <br><br>
+      <p><img style="height: 100px; width: 110px;" src="img/spark.png"/>
+      <img style="height: 100px; width: 200px;" src="img/hadoop1.png"/>
+      <img style="height: 100px; width: 200px;" src="img/kafka.png"/>
+      <img style="height: 100px; width: 200px;" src="img/pig1.png"/>
+      <img style="height: 100px; width: 200px;" src="img/hive.png"/>
+      <img style="height: 100px; width: 200px;" src="img/oozie.png"/>
+      <img style="height: 100px; width: 200px;" src="img/storm.png"/>
+    </p> 
+    </p>
+    <br><br>
+<h3>Peki nedir bu Apache Spark?</h3>
+<p>Apache Spark ilk olarak 2009 yılında UC Berkeley tarafından geliştirilmiştir. Daha sonra 2010 da açık kaynak kodlu bir Apache projesi haline gelmiştir. Açık kaynaklı bir dağıtık hesalama sistemidir. Scala dili ile yazılmıştır. Hızlı ve in-memory çalışır.</p>
+<br>
+<h4>Desteklediği diller;</h4>
+  <li style="margin-left:40px;">Scala</li>
+  <li style="margin-left:40px;">Java</li>
+  <li style="margin-left:40px;">Python</li>
+  <li style="margin-left:40px;">Clojure</li>
+  <li style="margin-left:40px;">R</li>
+
+<h3>Apache Spark Mimarisi</h3>
+<img style="height: 300px; width: 500px; margin-left:90px;" src="img/mimari.jpg"/>
+<h4>1.Veri Depolama</h4>
+	<p>Apache Spark hdfs dosya sistemini kullanır.Hadoop ile uyumlu olan HDFS,HBase,Cassandra vb sistemleri içeren herhangi bir yapıyla çalışıyor.</p>
+<h4>2.API</h4>
+	<p>Geliştiricilerin standart arayüzleri kullanarak Spark tabanlı uygulamalar geliştirmesine olanak tanır.Scala,java ve phyton için api sağlar.</p>
+<h4>3.Yönetim</h4>
+	<p>Spark Stand-alone sunucu olarak kurulabildiği gibi başka dağıtık sistemlerin(mesos,YARN) üzerine de kurulabilir.RDD(Resilient Distributed Datasets) Spark'ın
+		  temel konseptidir. RDD her tipte veriyi tutabilir.Spark farklı partitionlardaki veriyi RDD içinde tutar.</p>
+<h4>4.RDD(Resilient Distributed Datasets)</h4>
+	<p>RDD hesaplamaları yeniden düzenlemeye ve veri işlemeyi optimize etmeye yardımcı olur.RDD aynı zamanda hata toleransı da sağlar.
+      Çünkü RDD kendi nasıl yeniden oluşturacağını ve verileri nasıl yeniden işleyeceğini bilir.RDD iki tip operasyon destekler.</p>
+		<li style="margin-left:60px;">a.Transformasyon:
+		<p>Yeni bir RDD oluşturur ve tek bir değer dönmez oluşturduğu yeni RDD yi döner.Transformasyon metotları herhangi bir aksiyon methodu çağrılmadığı sürece bir işlem yapmaz sadece bir
+			  RDD alır ve geriye yeni bir RDD döndürür.En çok kullanılan fonksiyonları map,filter,flatMap,groupByKey,reduceByKey,aggregateByKey,pipe ve coalesce.
+		</p>
+		</li>	  
+		<li style="margin-left:60px;">b.Aksiyon:
+		<p>İşlemleri değerlendirip geriye yeni bir değer döner.RDD objesinin üstünde bir aksiyon fonksiyonu çağrıldığında tüm veri işleme sorguları çalıştırılır ve geriye bir 
+              sonuç değeri döndürür.En çok kullanılan fonksiyonları reduce,collect,count,first,take,countByKey ve foreach.    
+		</p>
+		</li>
+		
+		
+<h3>Apache Spark Ekosistemi</h3>
+<img style="height: 300px; width: 600px; margin-left:90px;" src="img/3.png"/>
+<h4>1.Spark Core:</h4>
+<p>Hafıza yönetimi işlerin dağıtılması, hata kurtarma, saklama ve dosya sistemlerine erişim gibi temel bileşenleri içerir.Resilient Distributed DataSets(RDDs,Hata Durumunda yeniden oluşturulabilen
+	  (Resilient) dağıtık veri kümeleri) Spark hesaplamalarında kullanılan,hesaplama düümlerine dağıtılmış en temel bileşenidir.RDD'lerin oluşturulması ve yönetilmesi için gerekli API'yi sağlar.
+	<p style="margin-left:40px;"> =>RDD(Resilient Distributed Dataset): RDD'ler oluşturulduktan sonra durumu güncellenemeyen(immutable) dağıtık nesneler koleksiyonudur.</p>
+	<p style="margin-left:60px;">-Paralel işletilirler</p>
+	<p style="margin-left:60px;">	-Resilient:Eğer veri kaybolursa yeniden yarat</p>
+	<p style="margin-left:60px;">    -Distributed:Dağıtık</p>
+	<p style="margin-left:60px;">	-Dataset:Veri manuel yaratabileceği gibi otomatik olarak da yaratılabilir.</p>
+	<p style="margin-left:60px;">	-RDD'ler read-only ve immutable'dır.Yani işleyebilirsin ama değiştiremezsin, okuyabilirsin ama yazamazsın.</p>
+</p>		
+
+<h4>2.Spark SQL:</h4>
+<p>Yapısal veriler ile çalışmak için kullanılan Spark bileşenidir. Standart SQL ve Apache Hive dili ile Json,Parquet(kolon temelli saklama formatı).Hive tabloları vb.gibi kaynaklar sorgulanabilir.
+	  Bu SQL bileşeni ve RDD'ler tarafından desteklenen operasyonlar ile komples analitik uygulamaları geliştirmek kolaylaşır.
+</p>
+
+<h4>3.Spark Streaming:</h4>
+<p>Bir web sunucusuna ait loğları veya anlık kullanıcı yorumları gibi sürekli akan canlı verileri işelemek için Spark Stream bileşeni kullanılır.Bu bileşen,tıpkı Spark Core içerisindeki API'lere
+ benzer şekilde RDD'leri canlı veriler için işlemeyi sağlar.Disk, hafıza, gerçek zamanlı akış gibi tüm veriler birlikte işlenebilir.</p>
+
+<h4>4.MLib:</h4>
+<p>Sınıflandırma,kümeleme,regresyon,filtreleme gibi makine öğrenmesi algoritmlarını içeren Spark kütüphanesidir.Kurulan modelin doğruluğunu 
+      test etmek veya dış kaynaklardan veri transfer etmek için gereken yardımcı bileşenler MLib kütüphanesine dahil edilmiştir.
+</p>
+
+<h4>5.GraphX:</h4>
+<p>RDD'lerin yönlü graphlara dönüştürülüp(directed direct) paralel olarak işlenmesini sağlayan bileşendir. Graph'ı oluşturan her noktaya (Vertex) ve ara bağlantılara(edge) farklı özellikler
+ tanımlamak,böylece sosyal paylaşım sistemlerin de sıklıkla kullanılan arkadaş networkü gibi bir yapıyı,paralel graph algoritmaları ile yönetmek mümkündür.Bazı problemlerin çözümü için çok daha hızlı çalışırlar ve kolay anlaşılırlar.</p>
+<img style="height: 400px; width: 600px; margin-left:100px;" src="img/ag.jpg"/>
+<img style="height: 400px; width: 600px; margin-left:100px;" src="img/ag1.png"/>
+<br><br>
+
+
+
+    </div>
+
 </aside>
