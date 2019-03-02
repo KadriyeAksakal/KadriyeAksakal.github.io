@@ -20,8 +20,11 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-	color: #fff;
+    color: #fff;
 	
+}
+blog{
+	height:100vh;
 }
 
 .apache{
